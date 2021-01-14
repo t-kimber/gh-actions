@@ -43,5 +43,5 @@ jobs:
           git --version
           echo and python?
           python --version
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo is conda installed?
+          conda --version
