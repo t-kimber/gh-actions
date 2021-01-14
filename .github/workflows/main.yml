@@ -20,7 +20,7 @@ jobs:
     name: Testing on OS ${{matrix.os}}
     # The type of runner that the job will run on
       # Ubuntu will download/checkout/clone/run our code
-    runs-on: ${{matrix.os}
+    runs-on: ${{matrix.os}}
     strategy:
       matrix:
         os: [macOS-latest, ubuntu-latest, windows-latest]
