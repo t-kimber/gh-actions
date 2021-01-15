@@ -71,6 +71,12 @@ jobs:
       - name: Generate code coverage report
         shell: bash -l {0}
         run: pytest --cov=./ --cov-report=xml --color=yes
+    
+     - name: Code coverage & more
+       run: |
+         yarn # Install dependencies
+         yarn test --coverage # Run test
+         bash <(curl -s https://codecov.io/bash)
         
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
