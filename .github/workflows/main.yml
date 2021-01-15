@@ -60,3 +60,8 @@ jobs:
         
       - name: Check conda environment
         run : conda list
+      
+      - name: Pytest installation
+        run: |
+          echo is Pytest installed ? 
+          pytest --version
