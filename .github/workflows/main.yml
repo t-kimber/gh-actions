@@ -52,21 +52,32 @@ jobs:
           echo is conda installed?
           conda --version
           
-      - name: Conda environment setup
+      - name: Install conda environment
         uses: conda-incubator/setup-miniconda@v2
         with:
           environment-file: devtools/my_test_env.yaml
           activate-environment: my_test_env
 
-      - name: Install conda environment
+      - name: Check conda environment
         shell: bash -l {0}
         run: conda list
-        
-      #- name: Check conda environment
-      #  run : conda list
       
       - name: Pytest installation # Sanity check
         shell: bash -l {0}
         run: |
           echo is Pytest installed ? 
           pytest --version
+          
+      - name: Generate code coverage report
+        shell: bash -l {0}
+        run: pytest --cov=./ --cov-report=xml --color=yes
+        
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          file: ./coverage.xml
+          flags: unittests
+          name: codecov-umbrella-${{ matrix.os }}-py${{ matrix.python-version }}
+        
+        
+           
