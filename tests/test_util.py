@@ -1,5 +1,6 @@
 import pytest
-from util import return_first_arg, return_second_arg
+from util import return_first_arg
+
 
 ####################
 @pytest.mark.parametrize(
