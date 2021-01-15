@@ -65,7 +65,8 @@ jobs:
       #- name: Check conda environment
       #  run : conda list
       
-      - name: Pytest installation
+      - name: Pytest installation # Sanity check
+        shell: bash -l {0}
         run: |
           echo is Pytest installed ? 
           pytest --version
