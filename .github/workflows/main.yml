@@ -72,8 +72,8 @@ jobs:
         shell: bash -l {0}
         run: pytest --cov=./ --cov-report=xml --color=yes
     
-      - name: Code coverage & more
-        run: bash <(curl -s https://codecov.io/bash)
+      #- name: Code coverage & more
+      #  run: bash <(curl -s https://codecov.io/bash)
         
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
