@@ -57,9 +57,13 @@ jobs:
         with:
           environment-file: devtools/my_test_env.yaml
           activate-environment: my_test_env
+
+      - name: Install conda environment
+        shell: bash -l {0}
+        run: conda list
         
-      - name: Check conda environment
-        run : conda list
+      #- name: Check conda environment
+      #  run : conda list
       
       - name: Pytest installation
         run: |
