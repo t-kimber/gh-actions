@@ -6,3 +6,8 @@
 
 [![Actions Status](https://github.com/t-kimber/gh-actions/workflows/flake8/badge.svg)](https://github.com/t-kimber/gh-actions/actions)
 
+This is a GitHub repository with the minimal files to generate
+- 👷 &nbsp; Continuous Integration (CI) with GitHub actions
+- Code coverage
+- ✅  &nbsp; Unit test using pytest
+- [Flake8](https://flake8.pycqa.org/en/latest/index.html#) tool
