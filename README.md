@@ -11,3 +11,6 @@ This is a GitHub repository with the minimal files to generate
 - Code coverage
 - ✅  &nbsp; Unit test using pytest
 - [Flake8](https://flake8.pycqa.org/en/latest/index.html#) tool
+
+
+Peace out.
